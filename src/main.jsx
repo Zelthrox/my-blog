@@ -4,71 +4,37 @@ import { BookOpen, BriefcaseBusiness, Github, Linkedin, Mail, PenLine, User } fr
 import './styles.css';
 
 const profile = {
-  name: 'Your Name',
-  title: 'Software Developer and Writer',
+  name: 'Andy Kwan',
+  title: 'Software Developer',
   intro: [
-    'Write a short introduction about who you are, what you work on, and what readers can expect from the blog.',
-    'Add a second paragraph for background, interests, education, or the thread that connects your work.'
+    '',
+    ''
   ],
   image:
-    'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80'
+    ''
 };
 
 const navItems = [
-  { label: 'Blog', href: '#blog' },
   { label: 'Resume', href: '#resume' },
   { label: 'About', href: '#about' }
 ];
 
-const categories = ['Book Reviews', 'Posts', 'School Notes'];
-
 const socialLinks = [
-  { label: 'LinkedIn', href: 'https://www.linkedin.com', Icon: Linkedin },
-  { label: 'GitHub', href: 'https://github.com', Icon: Github },
-  { label: 'Email', href: 'mailto:hello@example.com', Icon: Mail }
-];
-
-const posts = [
-  {
-    title: 'Notes on Building Reliable Systems',
-    date: 'May 2026',
-    category: 'Posts',
-    summary: 'A sample post excerpt. Replace this with a quick description of your writing.'
-  },
-  {
-    title: 'The Book That Changed How I Debug',
-    date: 'April 2026',
-    category: 'Book Reviews',
-    summary: 'Use these entries as compact previews for recent writing or highlighted essays.'
-  },
-  {
-    title: 'Distributed Systems Reading List',
-    date: 'March 2026',
-    category: 'School Notes',
-    summary: 'A tidy card for notes, references, or evergreen learning material.'
-  }
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/andy-k-15a9817b/', Icon: Linkedin },
+  { label: 'GitHub', href: 'https://github.com/Zelthrox', Icon: Github },
+  { label: 'Email', href: 'mailto:kwan.andy@hotmail.com', Icon: Mail }
 ];
 
 const experiences = [
   {
-    company: 'Current Company',
+    company: 'Stamped.io',
     role: 'Software Engineer',
-    period: '2022 - Present',
+    period: 'Aug 2023 - Aug 2025',
     bullets: [
-      'Describe the systems, products, or responsibilities you owned.',
-      'Add a concise achievement with measurable or concrete impact.'
+      '',
+      ''
     ],
-    environment: 'Java, Python, React, Kubernetes, AWS'
-  },
-  {
-    company: 'Previous Company',
-    role: 'Application Developer',
-    period: '2019 - 2022',
-    bullets: [
-      'Summarize the team, domain, and important projects.',
-      'Mention the tools and practices that shaped the work.'
-    ],
-    environment: 'TypeScript, Node.js, SQL, CI/CD'
+    environment: ''
   }
 ];
 
@@ -97,15 +63,6 @@ function Sidebar() {
           </a>
         ))}
       </div>
-
-      <section className="categories" aria-labelledby="categories-heading">
-        <h2 id="categories-heading">Categories</h2>
-        {categories.map((category) => (
-          <a href={`#${category.toLowerCase().replaceAll(' ', '-')}`} key={category}>
-            {category}
-          </a>
-        ))}
-      </section>
     </aside>
   );
 }
@@ -121,31 +78,7 @@ function AboutSection() {
       {profile.intro.map((paragraph) => (
         <p key={paragraph}>{paragraph}</p>
       ))}
-      <img src={profile.image} alt="Outdoor landscape placeholder" className="profile-image" />
-    </section>
-  );
-}
-
-function BlogSection() {
-  return (
-    <section className="section" id="blog" aria-labelledby="blog-heading">
-      <div className="eyebrow">
-        <PenLine size={17} aria-hidden="true" />
-        Latest Writing
-      </div>
-      <h2 id="blog-heading">Recent Posts</h2>
-      <div className="post-list">
-        {posts.map((post) => (
-          <article className="post-card" key={post.title}>
-            <div>
-              <span>{post.category}</span>
-              <time>{post.date}</time>
-            </div>
-            <h3>{post.title}</h3>
-            <p>{post.summary}</p>
-          </article>
-        ))}
-      </div>
+      <img src={profile.image} alt="image placeholder" className="profile-image" />
     </section>
   );
 }
@@ -196,7 +129,6 @@ function App() {
       <Sidebar />
       <main className="content">
         <AboutSection />
-        <BlogSection />
         <ResumeSection />
         <Footer />
       </main>
