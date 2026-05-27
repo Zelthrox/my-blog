@@ -1,0 +1,185 @@
+.profile {
+    min-height: 100vh;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #111 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  .glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.15;
+    animation: pulse 15s infinite ease-in-out;
+    z-index: 1;
+  }
+  
+  .glow1 {
+    width: 500px;
+    height: 500px;
+    background: rgb(59, 130, 246);
+    top: 20%;
+    left: 15%;
+  }
+  
+  .glow2 {
+    width: 400px;
+    height: 400px;
+    background: rgb(139, 92, 246);
+    bottom: 25%;
+    right: 15%;
+    animation-delay: 7s;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 0.12; }
+    50% { opacity: 0.25; }
+  }
+  
+  .heroContent {
+    max-width: 1100px;
+    padding: 0 40px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .greeting {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #a3a3a3;
+    margin-bottom: 16px;
+  }
+  
+  .name {
+    font-size: clamp(4rem, 8vw, 7.5rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -4px;
+    margin: 0 0 24px 0;
+  }
+  
+  .letter {
+    display: inline-block;
+  }
+  
+  .title {
+    font-size: clamp(2.25rem, 5vw, 4rem);
+    font-weight: 600;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 0 24px 0;
+  }
+  
+  .subtitle {
+    font-size: 1.35rem;
+    max-width: 520px;
+    margin: 0 auto 48px;
+    color: #a3a3a3;
+    line-height: 1.5;
+  }
+  
+  .cta {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    padding: 18px 40px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 9999px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+  }
+  
+  .btnPrimary {
+    background: white;
+    color: #111;
+  }
+  
+  .btnPrimary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.2);
+  }
+  
+  .btnPrimary:focus-visible {
+    outline: 3px solid rgb(59 130 246);
+    outline-offset: 4px;
+  }
+  
+  .btnSecondary {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+  }
+  
+  .btnSecondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .btnSecondary:focus-visible {
+    outline: 3px solid rgb(139 92 246);
+    outline-offset: 4px;
+  }
+  
+  .arrow {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .btnPrimary:hover .arrow {
+    transform: rotate(45deg);
+  }
+  
+  .scrollIndicator {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    z-index: 3;
+    color: #a3a3a3;
+  }
+  
+  .scrollText {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    font-weight: 400;
+  }
+  
+  /* Respect user motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .glow,
+    .profile * {
+      animation: none !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .cta {
+      flex-direction: column;
+      align-items: center;
+    }
+    .btn {
+      width: 260px;
+      justify-content: center;
+    }
+  }

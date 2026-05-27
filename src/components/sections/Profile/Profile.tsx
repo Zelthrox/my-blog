@@ -1,0 +1,97 @@
+import { motion } from 'framer-motion';
+import clsx from 'clsx';
+import styles from './Profile.module.css';
+import * as variants from './Profile.variants';
+import { profileContent } from './Profile.content';
+
+export default function Profile() {
+  const name = profileContent.name.split('');
+
+  return (
+    <section className={styles.profile}>
+      <div className={clsx(styles.glow, styles.glow1)} />
+      <div className={clsx(styles.glow, styles.glow2)} />
+
+      <div className={styles.heroContent}>
+        <motion.div
+          variants={variants.container}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.p variants={variants.item} className={styles.greeting}>
+            {profileContent.greeting}
+          </motion.p>
+
+          <motion.h1 variants={variants.container} className={styles.name}>
+            {name.map((char, i) => (
+              <motion.span
+                key={i}
+                variants={variants.letter}
+                className={styles.letter}
+                style={{ marginRight: char === ' ' ? '0.25em' : 0 }}
+              >
+                {char}
+              </motion.span>
+            ))}
+          </motion.h1>
+
+          <motion.h2 variants={variants.item} className={styles.title}>
+            {profileContent.title}
+          </motion.h2>
+
+          <motion.p variants={variants.item} className={styles.subtitle}>
+            {profileContent.subtitle}
+          </motion.p>
+
+          <motion.div variants={variants.item} className={styles.cta}>
+            <a
+              href="#projects"
+              className={clsx(styles.btn, styles.btnPrimary)}
+              aria-label={profileContent.ctaPrimaryAria}
+            >
+              {profileContent.ctaPrimary}
+              <span className={styles.arrow}>→</span>
+            </a>
+            <a
+              href="#contact"
+              className={clsx(styles.btn, styles.btnSecondary)}
+              aria-label={profileContent.ctaSecondaryAria}
+            >
+              {profileContent.ctaSecondary}
+            </a>
+          </motion.div>
+        </motion.div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.8, duration: 0.8 }}
+        className={styles.scrollIndicator}
+      >
+        <div className={styles.scrollText}>{profileContent.scrollText}</div>
+        <motion.div
+          animate={{ y: [0, 15, 0] }}
+          transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 5V19M12 19L5 12M12 19L19 12"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+}
