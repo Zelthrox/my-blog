@@ -35,12 +35,12 @@ export default function Profile() {
             ))}
           </motion.h1>
 
-          <motion.h2 variants={variants.item} className="title">
+          <motion.h2 variants={variants.item} className={styles.subtitle}>
             {profileContent.title}
           </motion.h2>
 
-          <motion.p variants={variants.item} className="subtitle">
-            {profileContent.subtitle}
+          <motion.p variants={variants.item} className={styles.description}>
+            {profileContent.description}
           </motion.p>
 
           <motion.div variants={variants.item} className={styles.cta}>

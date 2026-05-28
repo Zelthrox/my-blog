@@ -1,0 +1,44 @@
+.floatingSocials {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 1000;
+  }
+  
+  .iconLink {
+    width: 52px;
+    height: 52px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+  }
+  
+  .iconLink:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3);
+  }
+  
+  .iconLink svg {
+    width: 26px;
+    height: 26px;
+  }
+  
+  @media (max-width: 640px) {
+    .floatingSocials {
+      bottom: 20px;
+      right: 20px;
+    }
+    .iconLink {
+      width: 48px;
+      height: 48px;
+    }
+  }

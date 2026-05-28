@@ -1,6 +1,7 @@
 import Profile from "./components/sections/Profile"
 import TechStack from "./components/sections/TechStack"
 import Projects from "./components/sections/Projects"
+import FloatingSocials from "./components/FloatingSocials"
 
 export default function App() {
     return(
@@ -8,6 +9,8 @@ export default function App() {
             <Profile />
             <TechStack />
             <Projects />
+
+            <FloatingSocials />
         </>
     )
 }

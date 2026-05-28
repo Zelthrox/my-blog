@@ -13,7 +13,7 @@ export const projectsContent = {
         id: 2,
         title: 'Cart Itemer',
         description:
-          'An app to keep track of items in cart while shopping (WIP)',
+          'An app to keep track of items in cart while shopping',
         tech: ['React', 'TypeScript', 'NodeJS',  'AI'],
         link: 'https://github.com/Zelthrox/Cart-Itemer',
       },

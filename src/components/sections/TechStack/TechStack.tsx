@@ -14,7 +14,7 @@ export default function TechStack() {
         viewport={{ once: true }}
         className={styles.experience}
       >
-        <span className="text-orange-400">9+</span> Years Development Experience
+        <span>9+</span> Years Development Experience
       </motion.div>
 
       {/* Title */}
