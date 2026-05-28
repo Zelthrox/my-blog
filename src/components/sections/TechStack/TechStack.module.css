@@ -1,0 +1,82 @@
+.techStack {
+    padding: 140px 40px 120px;
+    background: #111;
+    color: white;
+    position: relative;
+  }
+  
+  .experience {
+    position: absolute;
+    top: 60px;
+    left: 40px;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #f59e0b;
+    line-height: 1;
+  }
+  
+  .experience span {
+    color: white;
+  }
+  
+  .title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 80px;
+    letter-spacing: -2px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 60px 30px;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .categoryTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #a3a3a3;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  
+  .techCard {
+    background: white;
+    color: #111;
+    border-radius: 9999px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .techCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.15);
+  }
+  
+  .techIcon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @media (max-width: 1024px) {
+    .experience { position: static; margin-bottom: 40px; }
+  }

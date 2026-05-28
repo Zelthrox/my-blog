@@ -7,5 +7,4 @@ export const profileContent = {
     ctaPrimaryAria: 'View my work section',
     ctaSecondary: 'Get In Touch',
     ctaSecondaryAria: 'Get in touch with me',
-    scrollText: 'SCROLL',
   } as const;
