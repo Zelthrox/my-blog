@@ -1,0 +1,83 @@
+.projects {
+    padding: 140px 40px 120px;
+    background: #111;
+    color: white;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    background: #1a1a1a;
+    border-radius: 24px;
+    padding: 32px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+  }
+  
+  .cardTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  
+  .cardDescription {
+    flex: 1;
+    color: #a3a3a3;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  
+  .techTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+  
+  .techTag {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ddd;
+    font-size: 0.85rem;
+    padding: 4px 14px;
+    border-radius: 9999px;
+    white-space: nowrap;
+  }
+  
+  .btn {
+    align-self: flex-start;
+    padding: 12px 28px;
+    background: white;
+    color: #111;
+    font-weight: 500;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #3b82f6;
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+    .card {
+      padding: 28px;
+    }
+  }

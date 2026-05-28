@@ -16,3 +16,23 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.title {
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  font-weight: 600;
+  text-align: center;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 auto 24px auto;
+  width: fit-content;
+}
+
+.subtitle {
+  font-size: 1.35rem;
+  max-width: 520px;
+  margin: 0 auto 48px;
+  color: #a3a3a3;
+  line-height: 1.5;
+}
