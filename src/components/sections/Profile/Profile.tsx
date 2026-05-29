@@ -52,13 +52,6 @@ export default function Profile() {
               {profileContent.ctaPrimary}
               <span className={styles.arrow}>→</span>
             </a>
-            <a
-              href="#contact"
-              className={clsx(styles.btn, styles.btnSecondary)}
-              aria-label={profileContent.ctaSecondaryAria}
-            >
-              {profileContent.ctaSecondary}
-            </a>
           </motion.div>
         </motion.div>
       </div>

@@ -4,7 +4,5 @@ export const profileContent = {
     title: 'FULL STACK DEVELOPER',
     description: 'Building exceptional digital experiences with modern web technologies',
     ctaPrimary: 'View My Work',
-    ctaPrimaryAria: 'View my work section',
-    ctaSecondary: 'Get In Touch',
-    ctaSecondaryAria: 'Get in touch with me',
+    ctaPrimaryAria: 'View my work section'
   } as const;
